@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "dharamu_backend": {
+      "main": "src/dharamu_backend/main.mo",
+      "type": "motoko"
+    },
+    "dharamu_frontend": {
+      "dependencies": [
+        "dharamu_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/dharamu_frontend/src/index.html"
+      },
+      "source": [
+        "src/dharamu_frontend/assets",
+        "dist/dharamu_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
